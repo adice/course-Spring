@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="E:/lib/spring3.0.6/org.springframework.transaction-3.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/lib/spring3.0.6/org.springframework.beans-3.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/lib/spring3.0.6/org.springframework.context-3.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/lib/spring3.0.6/org.springframework.core-3.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/lib/spring3.0.6/org.springframework.expression-3.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/lib/spring3.0.6/org.springframework.jdbc-3.0.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/lib/mysql-connector-java-3.1.13-bin.jar"/>
+	<classpathentry kind="lib" path="E:/lib/struts2/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="E:/lib/spring3.0.6/org.springframework.asm-3.0.6.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
