@@ -1,6 +1,9 @@
 # spring-course
 Spring相关课程及Demo
 
+5.SpringMVC映射l的Demo
+        zhong例子中列举了常用的web请求到相应的SpringMVC控制器的映射方式
+
 6.SpringResponse的Demo
         案例中列举了几种常见的响应，包括输入为JSP、Excel、PDF、JSON等
 
