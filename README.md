@@ -1,6 +1,9 @@
 # spring-course
 Spring相关课程及Demo
 
+3.AOP
+        列举了常见的几种通知，比如前置通知、后置通知的基本用法
+
 5.SpringMVC映射l的Demo
         zhong例子中列举了常用的web请求到相应的SpringMVC控制器的映射方式
 
