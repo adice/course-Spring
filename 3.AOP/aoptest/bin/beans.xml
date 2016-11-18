@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	">
+	<bean id="Md5Advice" class="com.users.advices.Md5Advice"></bean>
+	<bean id="ScoreAdvice" class="com.users.advices.ScoreAdvice"></bean>
+	<bean id="TimeAdvice" class="com.users.advices.TimeAdvice"></bean>
+	
+	<bean id="UsersBizImpl" class="com.users.biz.UsersBizImpl">
+	</bean>
+	
+	<bean id="UsersBizProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces">
+			<value>com.users.biz.UsersBiz</value>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>TimeAdvice</value>
+				
+			</list>
+		</property>
+		<property name="target" ref="UsersBizImpl"></property>
+	</bean>
+	
+</beans>
