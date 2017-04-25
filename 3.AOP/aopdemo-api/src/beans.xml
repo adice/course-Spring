@@ -1,0 +1,33 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	<!-- 业务逻辑 -->
+	<bean id="UserServiceImpl" class="service.UserServiceImpl"></bean>
+	<!-- advices -->
+	<bean id="Md5Advice" class="advices.Md5Advice"></bean>
+	<!-- pointcut -->
+	<!-- bean id="Md5Pointcut" class="org.springframework.aop.support.NameMatchMethodPointcut">
+		<property name="mappedName" value="regist"></property>
+	</bean-->
+	<bean id="Md5Pointcut" class="org.springframework.aop.support.JdkRegexpMethodPointcut">
+		<property name="patterns">
+			<list><value>.*regist.*</value></list>
+		</property>
+		<property name="excludedPattern" value=".*User"></property>
+	</bean>
+	<!-- advisor -->
+	<bean id="Md5Advisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+		<property name="advice" ref="Md5Advice"></property>
+		<property name="pointcut" ref="Md5Pointcut"></property>
+	</bean>
+	<bean id="UserServiceProxy"
+        class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="UserServiceImpl" />
+        <property name="interceptorNames">
+            <list>
+                <value>Md5Advisor</value>
+            </list>
+        </property>
+</bean>
+</beans>
