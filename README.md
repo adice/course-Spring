@@ -13,7 +13,7 @@ Spring相关课程及Demo
 
 5.SpringMVC映射l的Demo
 
-zhong例子中列举了常用的web请求到相应的SpringMVC控制器的映射方式
+例子中列举了常用的web请求到相应的SpringMVC控制器的映射方式
 
 6.SpringResponse的Demo
 
