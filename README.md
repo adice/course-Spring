@@ -31,3 +31,7 @@ Spring相关课程及Demo
 
 实体Bean各种关系的注解配置
 BaseDao封装了常见的Hibernate操作
+
+10.Spring集成一
+
+Spring对Email和任务调度的支持
