@@ -35,3 +35,7 @@ BaseDao封装了常见的Hibernate操作
 10.Spring集成一
 
 Spring对Email和任务调度的支持
+
+11.Spring集成二
+
+Spring对WebService的支持
